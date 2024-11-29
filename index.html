@@ -1,134 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manuel Conde - Partner at HAIZ Technology Consulting</title>
-<meta name="description" content="Professional business card for Manuel Conde, Partner at HAIZ Technology Consulting.">
-<meta name="keywords" content="Manuel Conde, HAIZ Technology Consulting, EMEA Consulting, Digital Transformation, Technology Services">
-<meta name="author" content="Manuel Conde">
-<meta property="og:title" content="Manuel Conde - Partner at HAIZ Technology Consulting">
-<meta property="og:description" content="Contact information for Manuel Conde, Partner at HAIZ Technology Consulting.">
-<meta property="og:type" content="profile">
-<meta property="og:image" content="https://pbs.twimg.com/profile_images/1844681951141138436/-2xbdg3F_400x400.jpg">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@manueljpconde">
-<meta name="twitter:title" content="Manuel Conde - Partner at HAIZ Technology Consulting">
-<meta name="twitter:description" content="Contact information for Manuel Conde, Partner at HAIZ Technology Consulting.">
-<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1844681951141138436/-2xbdg3F_400x400.jpg">
-<style>
-/* Colors: Based on https://s3.ca-central-1.amazonaws.com/logojoy/logos/191080663/noBgColor.png */
-:root {
-  --dark-blue: #003f63;
-  --light-blue: #70b7d9;
-  --white: #ffffff;
-  --gray: #f4f4f4;
-  --text-dark: #2b2b2b;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: var(--dark-blue);
-}
-.card-container {
-  width: 90%;
-  max-width: 510px;
-  height: auto;
-  aspect-ratio: 510 / 290;
-  position: relative;
-  perspective: 1000px;
-  cursor: pointer;
-}
-.card-container.flipped .card-face-front {
-  transform: rotateY(180deg);
-}
-.card-container.flipped .card-face-back {
-  transform: rotateY(0deg);
-}
-.card-face {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  transform: rotateY(0deg);
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-.card-face-back {
-  transform: rotateY(180deg);
-  background-color: var(--light-blue);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'EB Garamond', serif;
-  color: var(--text-dark);
-}
-.card-face-front {
-  background-color: var(--white);
-  color: var(--text-dark);
-  font-family: 'EB Garamond', serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  border: 2px solid var(--light-blue);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-.name {
-  font-size: 24px;
-  font-weight: 500;
-  margin: 0;
-  text-align: center;
-}
-.title {
-  font-size: 18px;
-  margin: 5px 0;
-  text-align: center;
-  color: var(--dark-blue);
-}
-.contact {
-  margin-top: 20px;
-  font-size: 14px;
-  text-align: center;
-}
-.contact a {
-  color: var(--dark-blue);
-  text-decoration: none;
-}
-.contact a:hover {
-  text-decoration: underline;
-}
-@media (max-width: 600px) {
-  .card-container {
-    width: 100%;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manuel Conde - Partner at HAIZ Technology Consulting</title>
+  <meta name="description" content="Professional business card for Manuel Conde, Partner at HAIZ Technology Consulting.">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #003f63;
+      font-family: 'Exo 2', sans-serif;
+      color: #ffffff;
+    }
+
+    .card-container {
+      width: 510px;
+      height: 290px;
+      position: relative;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-radius: 12px;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 12px;
+    }
+
+
+    .card-face-front {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers all elements horizontally */
+        justify-content: flex-start; /* Aligns elements from the top */
+        gap: 15px; /* Adds consistent spacing between elements */
+      }    
+
+    .card-face-back {
+      background-color: #70b7d9;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #003f63;
+      margin-top: 20px; /* Add space above the name */
+      margin-bottom: 1px; /* Create some space between the name and the title */
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #003f63;
+    }
+
+    .contact {
+
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .contact a {
+      color: #003f63;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centers email and phone horizontally */
+      justify-content: center;
+      gap: 2x; /* Consistent spacing between email and phone */
+      margin: 0; /* No extra margins */
+      text-align: center; /* Ensures the text aligns properly */
+      width: 100%; /* Matches the width of the parent container */
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-photo {
+        position: absolute; /* Allows overlap */
+        bottom: -30px; /* Moves the photo downward so it's half inside and half outside the card */
+        left: 50%; /* Centers the photo horizontally */
+        transform: translateX(-50%); /* Corrects centering */
+        width: 60px; /* Photo size */
+        height: 60px;
+        border-radius: 50%; /* Makes the photo circular */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for better visibility */
+        background-color: #ffffff; /* Ensures a clean outline around the photo */
+      }
+
+    .qrcode {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 11px;
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .card-container {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 510 / 290;
+      }
+
+      .profile-photo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .qrcode {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .counter {
+        margin-top: 20px;
+        font-size: 11px;
+        color: #ffffff;
+        text-align: center;
+      }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
 <body>
-<div class="card-container" tabindex="0" role="button" aria-label="Click to flip the card">
-  <div class="card-face card-face-front">
-    <h1 class="name">Manuel Conde</h1>
-    <p class="title">Partner, HAIZ Technology Consulting</p>
-    <div class="contact">
-      <p>Email: <a href="mailto:manuel@haiz.pt">manuel@haiz.pt</a></p>
-      <p>Phone: <a href="Mob:+351911981920">+351 911 981 920</a></p>
+  <div class="card-container" tabindex="0" role="button" aria-label="Click to flip the card">
+    <div class="card" id="card">
+        <div class="card-face card-face-front">
+            <p class="name">Manuel Conde</p>
+            <p class="title">Partner, HAIZ Technology Consulting</p>
+            <div class="contact">
+                <p>Email: <a href="mailto:manuel@haiz.pt?subject=Inquiry&body=Hello Manuel,">manuel@haiz.pt</a></p>
+                <p>Phone: <a href="tel:+351911981920">+351 911 981 920</a></p>
+            </div>
+            
+            <img src="https://pbs.twimg.com/profile_images/1844681951141138436/-2xbdg3F_400x400.jpg" alt="Manuel Conde's Photo" class="profile-photo">
+            
+        </div>
+        <div class="card-face card-face-back">
+            <p>For more information, visit my website <br><br>
+            <a  href="https://haiz.pt" target="_blank" style="color: #ffffff; text-decoration: underline;">haiz.pt</a></p>
+        </div>
     </div>
   </div>
-  <div class="card-face card-face-back">
-    <p>For more information, visit our website:</p>
-    <a href="https://haiz.pt" target="_blank">haiz.pt</a>
+
+  <div class="footer">
+    <p><span id="flipCounter">0</span></p>
+    <p>Made by Manuel Conde (2024)</p>
   </div>
-</div>
-<script>
-document.querySelector('.card-container').addEventListener('click', function() {
-  this.classList.toggle('flipped');
-});
-</script>
+  <script>
+    const vCardData = `
+BEGIN:VCARD
+VERSION:3.0
+N:Conde;Manuel;;;
+FN:Manuel Conde
+ORG:HAIZ Technology Consulting
+TITLE:Partner
+TEL;TYPE=WORK,VOICE,CELL:+351911981920
+EMAIL;TYPE=WORK:manuel@haiz.pt
+END:VCARD
+`;
+
+
+
+    const card = document.getElementById('card');
+
+    let flipCount = 0; // Initialize flip count
+
+
+    document.querySelector('.card-container').addEventListener('click', () => {
+      card.classList.toggle('flipped');
+      flipCount++; 
+      document.getElementById('flipCounter').textContent = flipCount; // Update counter
+    });
+   
+
+
+    function autoFlip() {
+        card.classList.toggle('flipped');
+        flipCount++; // Increment flip count
+        document.getElementById('flipCounter').textContent = flipCount; // Update counter
+      }
+      
+      // Flip the card every 6 seconds
+      setInterval(autoFlip, 4000);    
+  </script>
 </body>
 </html>
